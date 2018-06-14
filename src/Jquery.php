@@ -39,11 +39,11 @@ class Jquery
      */
     public static function unique($version = '1.12.4')
     {
-        $tag = self::tag($version);
+        $path = self::path($version);
         $script = <<<php
 <script>
     (function(){
-        window.jQuery || document.write('$tag');
+        window.jQuery || document.write("<script src='$path'><\/script>");
     })();
 </script>
 php;
