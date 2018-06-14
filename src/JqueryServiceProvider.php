@@ -24,11 +24,7 @@ class JqueryServiceProvider extends ServiceProvider
         Blade::directive('jquery', function ($version) {
             $version = str_replace(['"', "'", ' '], '', $version);
             $version = empty($version) ? '1.12.4' : $version;
-            $jqueryJsPath = asset('statics/jquery/'.$version.'/jquery.min.js');
-            $jquery = <<<php
-<script src="$jqueryJsPath"></script>
-php;
-            return $jquery;
+            return Jquery::tag($version);
         });
     }
 
