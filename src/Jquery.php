@@ -14,7 +14,7 @@ class Jquery
      */
     public static function path($version = '1.12.4')
     {
-        return asset('statics/jquery/'.$version.'/jquery.min.js');
+        return asset('statics/laravel-jquery/'.$version.'/jquery.min.js');
     }
 
     /**
